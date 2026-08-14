@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy's Dinner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+                <img class="header-img" src="./images/header.png">
+                <div class="header-text">
+                    <h1>Jimmy's Dinner</h1>
+                    <p>The best burgers and pizzas in town.</p>
+                </div>
+        </header>
+        <main>
+            <div class="menu-container" id="menu-container">
+                <!-- renderr all item here -->
+            </div>
+        <div class="total-order-container" id="total-order-container">
+            <div class="order-container" id="order-container">
+                <h3>Your order</h3>
+                <div class="order-cart" id="order-cart">
+                    <!-- render all order here -->
+                </div>
+            </div>
+            <div class="total-order-container">
+                <div class="total-wrapper">
+                    <p>Total Price:</p>
+                    <p id="total-value-el">0$</p>
+                </div>
+            </div>
+            <div class="order-btn-wrapper">
+                <button class="order-btn" id="order-btn">Complete Order</button>
+            </div>
+        </div>
+        </main>
+    </div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <button class="close-btn">X</button>
+                <h2>Enter your details</h2>
+                    <form class="payment-form" id="payment-form">
+                        <input type="text" 
+                        placeholder="Enter your name"
+                        id="name"
+                        name="fullName"
+                        required>
+
+                        <input type="text" 
+                        inputmode="numeric" 
+                        placeholder="Enter card number"
+                        id="cardNumber"
+                        name="cardNumber"
+                        required>
+
+                        <input type="text" 
+                        inputmode="numeric" 
+                        maxlength="3" 
+                        placeholder="Enter CVV"
+                        name="cvv"
+                        id="cvvNo"
+                        required
+                        >
+
+                        <button class="pay-btn" id="pay-btn">Pay</button>
+                    </form>
+            </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
